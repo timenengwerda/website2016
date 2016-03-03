@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl" ng-app="tengwerda">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Timen Engwerda</title>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/styles.css">
+
+		<script src="js/angular.min.js"></script>
+		<script src="http://code.angularjs.org/1.4.0/angular-route.js"></script>
+		<script>
+			var app = angular.module('tengwerda', ['ngRoute']);
+		</script>
+		<script src="js/route.js"></script>
+		<!-- <script src="js/app.js"></script> -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+		<link rel="stylesheet" type="text/css" href="js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+		
+		<script src="js/scripts.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<body>
+		<div class="container">
+			<nav class="menu">
+				<ul ng-controller="NavigationController as navigationCtrl">
+					<li ng-class="{active: navigationCtrl.isActive(1)}">
+						<a href="#">Home</a>
+					</li>
+					<li ng-class="{active: navigationCtrl.isActive(2)}">
+						<a href="#portfolio">Portfolio</a>
+					</li>
+					<li ng-class="{active: navigationCtrl.isActive(3)}">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="social-big">
+				<li>
+					<a href="http://www.twitter.com/tengwerda/" class="twitter" target="_BLANK" title="Ga naar Twitter">
+						<img src="images/icons/twitter.svg" class="svg" title="Twitter">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/profile/view?id=337094058" class="linkedin" target="_BLANK" title="Ga naar linkedin">
+						in
+					</a>
+				</li>
+				<li>
+					<a href="http://www.tengwerda.nl/cv_timen_engwerda.pdf" class="cv" target="_BLANK" title="Download CV">
+						cv
+					</a>
+				</li>
+			</ul>
+			<div ng-view class="content">
+				
+			</div>
+		</div>
+		<footer>
+			<div class="centered_div">
+				<ul class="social">
+					<li>
+						<a href="http://www.twitter.com/tengwerda/" class="twitter" target="_BLANK" title="Ga naar Twitter">
+							<img src="images/icons/twitter.svg" class="svg" title="Twitter">
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/profile/view?id=337094058" class="linkedin" target="_BLANK" title="Ga naar linkedin">
+							in
+						</a>
+					</li>
+					<li>
+						<a href="http://www.tengwerda.nl/cv_timen_engwerda.pdf" class="cv" target="_BLANK" title="Download CV">
+							cv
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

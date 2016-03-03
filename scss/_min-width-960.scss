@@ -1,0 +1,84 @@
+@media only screen and (min-width: 960px) {
+	.content, .centered_div {
+		padding: 0;
+	}
+	.portfolio .tile {
+		width: 25%;
+		h2, .clickfor {
+			opacity: 0;
+		}
+		a {
+			&:hover{
+				h2, .clickfor {
+					opacity: 1;
+				}
+				img {
+					width: 115%;
+					animation: portfolio-item 7s infinite;
+					animation-timing-function: linear;
+				}
+
+				&:after {
+					opacity: 0.5;
+				}
+				
+			}
+		}
+	}
+
+	.home {
+		article, img.timen {
+			display: inline-block;
+		}
+
+		article {
+			width: 65%;
+			float: left;
+		}
+
+		img.timen {
+			width: 25%;
+			float: right;
+
+		}
+	}
+
+	ul.social-big {
+		width: 15%;
+		position: absolute;
+		left: 19px;
+		top: 330px;
+		display: block;
+		transform: rotate(-5deg);
+	}
+	nav.menu {
+		width: 15%;
+		position: absolute;
+		left: 0;
+		top: 150px;
+
+		li {
+			margin: 1em 0 0 -1em;
+			a {
+				padding: 0.5em 1em 0.5em 2em;
+				transform: rotate(-5deg);
+			}
+		}
+	}
+	.content {
+		width: 80%;
+		float: right;
+		margin-top: 150px;
+		padding-right: 1em;
+	}
+
+	.timen {
+		width: auto;
+	}
+
+	footer {
+		display: none;
+	}
+
+	
+}

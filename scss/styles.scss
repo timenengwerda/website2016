@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@import 'reset';
+@import 'settings';
+
+
+body {
+	background: $background;
+	color: $textColor;
+	font-family: $font;
+	line-height: 1.7em;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a {
+	color: $textColor;
+	&:hover, &:focus {
+		color: #000;
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 3.3em;
+	margin: 6px 0 0.6em 0;
+	line-height: 1.1em;
+}
+
+// h1, h2, h3, h4, h5, h6 {
+// 	color: #C16D63
+// }
+
+.centered_div {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 .7em;
+}
+.container {
+	flex: 1;
+}
+.content {
+	padding: 0 .7em;
+}
+
+footer {
+	background: $textColor;
+	height: 300px;
+	margin: 2em 0 0;
+	color: #FFF;
+}
+
+p {
+	margin: 0.8em 0;
+}
+
+small {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+nav.menu {
+	li {
+		width: 100%;
+		margin: 0.2em 0;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: $textColor;
+			color: #FFF;
+			text-decoration: none;
+			padding: .7em;
+			
+		}
+
+		a:hover, a:focus, &.active a {
+			background: lighten($textColor, 40%);
+			color: $textColor;
+		}
+	} 
+}
+
+
+.timen {
+	border: 5px solid #FFF;
+	box-shadow: 2px 2px 2px #888;
+}
+
+
+.skills {
+	list-style: none; 
+ 	.title {
+ 		margin: 1em 0 0.4em 0;
+ 		font-size: 1.3em;
+ 		font-weight: 700;
+ 	}
+ 	.skill {
+ 		position: relative;
+ 		
+ 		span {
+ 			position: absolute;
+ 			top: 3px;
+ 			left: 1em;
+ 			color: #fff;
+ 			font-weight: 300;
+			text-shadow: 1px 1px 1px #000;
+ 		}
+ 	}
+
+ 	.skill progress {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		background-size: auto;
+		height: 30px;
+		width: 100%; 
+
+	}
+
+
+	//Combining webkit and moz screws things over. So declare seperately
+	.software::-webkit-progress-value {
+		background: #AB4848;
+	}
+	.software::-moz-progress-bar {
+		background: #AB4848;
+	}
+
+	.skillsitem::-webkit-progress-value {
+		background: #7A1C1C;
+	}
+	.skillsitem::-moz-progress-bar {
+		background: #7A1C1C;
+	}
+
+	.scripting::-webkit-progress-value {
+		background: #D99C8B;
+	}
+	.scripting::-moz-progress-bar {
+		background: #D99C8B;
+	}
+
+}
+
+@import 'components/portfolio';
+@import 'components/social';
+@import 'min-width-480';
+@import 'min-width-960';

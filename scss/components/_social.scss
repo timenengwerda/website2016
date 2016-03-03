@@ -1,0 +1,32 @@
+.social-big {
+	display: none;
+}
+ul.social, ul.social-big {
+	margin: 1em  0 0;
+	li {
+		float: left;
+		margin: 0 1em 0 0;
+		a {
+			width: 60px;
+			height: 60px;
+			display: block;
+			padding: 5px;
+			background: lighten($textColor, 40%);
+
+			svg {
+				fill: $textColor;
+				width: 100%;
+				height:100%;
+			}
+
+			&.cv, &.linkedin {
+				text-decoration: none;
+				font-weight: 700;
+				font-size: 2.2em;
+				text-align: center;
+				line-height: 1.6em;
+			}
+		}
+
+	}
+}

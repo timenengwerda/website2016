@@ -1,0 +1,15 @@
+<section class="tiles portfolio" ng-controller="PortfolioController as pc">
+	<h1>Portfolio</h1>
+	<article class="tile" ng-repeat="item in items" resize-portfolio-tile>
+		<a href="{{item.link}}" class="portfolio-link" ng-class="{{item.linktype}}" target="{{item.linktype == 'git' ? '_blank' : '_self'}}">
+			<h2>{{item.title}}</h2>
+			<img ng-src="{{item.imagex1}}" ng-title="{{item.title}}" ng-alt="{{item.title}}"/>
+			<span class="clickfor clickzoom" ng-show="item.linktype == 'zoom'">
+				Klik voor groot
+			</span>
+			<span class="clickfor clickgit" ng-show="item.linktype == 'git'">
+				Klik voor github
+			</span>
+		</a>
+	</article>
+</section>
