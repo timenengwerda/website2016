@@ -6,8 +6,8 @@ $(function () {
 	});
 
 	function resizePortfolioTile () {
-		var cw = $('.portfolio .tile img').outerWidth();
-		$('.portfolio .tile').height(cw);
+		var cw = $('.portfolio .tile img').width();
+		$('.portfolio .tile').height(cw-3);
 	}
 
 	/*
@@ -57,8 +57,8 @@ app.directive('resizePortfolioTile', ['$timeout', function ($timeout) {
 		link: function ($scope, el, attr) {
 			$timeout(function () {				
 				//Resize tile
-				var cw = $(el).outerWidth();
-				$(el).height(cw);
+				var cw = $(el).find('img').outerWidth();
+				$(el).height(cw-3);
 
 				var link = $(el).find('a.portfolio-link');
 				//Add fancybox
@@ -72,16 +72,30 @@ app.directive('resizePortfolioTile', ['$timeout', function ($timeout) {
 }])
 .controller('PortfolioController',['$scope', function ($scope) {
 	$scope.items = [{
-		'title': 'Hoi',
+		'title': 'Red Queen',
 		'imagex1': 'portfolio/redqueen.jpg',
-		'imagex2': 'portfolio/redqueen.jpg',
-		'link': 'portfolio/redqueen.jpg',
+		'link': 'portfolio/redqueen-groot.jpg',
 		'linktype': 'zoom'
 	},{
-		'title': 'Githubje',
-		'imagex1': 'portfolio/redqueen.jpg',
-		'imagex2': 'portfolio/redqueen.jpg',
-		'link': 'http://www.github.com/timenengwerda/',
+		'title': 'Bennoe',
+		'imagex1': 'portfolio/bennoe.jpg',
+		'link': 'https://github.com/timenengwerda/bennoe',
+		'linktype': 'git'
+	},{
+		'title': 'Meisje',
+		'imagex1': 'portfolio/meisje.jpg',
+		'link': 'portfolio/meisje-groot.png',
+		'linktype': 'zoom'
+	},{
+		'title': 'Bullethell game',
+		'imagex1': 'portfolio/bullethell.jpg',
+		'link': 'https://github.com/timenengwerda/wasd_score/',
+		'linktype': 'git'
+	}
+	,{
+		'title': 'Auti app',
+		'imagex1': 'portfolio/auti-app.jpg',
+		'link': 'https://github.com/timenengwerda/auti_app',
 		'linktype': 'git'
 	}];
 
