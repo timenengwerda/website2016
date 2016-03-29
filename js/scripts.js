@@ -104,10 +104,6 @@ app.directive('resizePortfolioTile', ['$timeout', function ($timeout) {
 .controller('HomeController', ['$scope', function ($scope) {
 	$scope.age = 0;
 
-	var date1 = new Date("9/12/1986");
-	var date2 = new Date();
-	var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-	var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-	
-	$scope.age = Math.round(diffDays/365);
+	var birthday = +new Date('9/12/1986"');
+	$scope.age = ~~((Date.now() - birthday) / (31557600000));
 }]);
