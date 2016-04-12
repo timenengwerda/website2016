@@ -155,6 +155,34 @@ nav.menu li {
   .skills .scripting::-moz-progress-bar {
     background: #D99C8B; }
 
+.cv article {
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  background: #f0f0ea;
+  margin: 0 0 2em 0; }
+  .cv article h2 {
+    margin: 0;
+    font-size: 2.1em;
+    font-weight: 700;
+    background: #434530;
+    color: #FFF;
+    padding: 0.3em 0.5em; }
+.cv ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .cv ul li {
+    padding: 0.5em 1em;
+    display: block;
+    width: 100%; }
+    .cv ul li:nth-child(even) {
+      background: #aeb190; }
+    .cv ul li span {
+      width: 100%;
+      display: block;
+      margin: 0.5em 0; }
+
 .portfolio {
   float: left;
   width: 100%; }
@@ -264,7 +292,18 @@ ul.social, ul.social-big {
     width: 33.333333%; }
 
   .timen {
-    width: 50%; } }
+    width: 50%; }
+
+  .cv article.subject ul li {
+    display: table; }
+    .cv article.subject ul li span {
+      margin: 0;
+      width: auto;
+      display: table-cell; }
+      .cv article.subject ul li span:nth-of-type(1) {
+        width: 25%; }
+      .cv article.subject ul li span:nth-of-type(3) {
+        width: 35%; } }
 @media only screen and (min-width: 960px) {
   .content, .centered_div {
     padding: 0; }

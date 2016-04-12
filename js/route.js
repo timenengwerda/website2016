@@ -31,6 +31,11 @@ app.config(['$routeProvider', function($routeProvider) {
 		controller: 'NavigationController',
 		activeTab: 2
 	}).
+	when('/curriculum-vitae', {
+		templateUrl: 'partials/cv.html',
+		controller: 'NavigationController',
+		activeTab: 0
+	}).
 	otherwise({
 		redirectTo: '/',
 		controller: 'NavigationController',

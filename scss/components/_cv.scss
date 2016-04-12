@@ -1,0 +1,43 @@
+.cv {
+	article {
+		width: 100%;
+		max-width: 900px;
+		overflow: hidden;
+		background: lighten($textColor, 70%);
+		margin: 0 0 2em 0;
+
+		h2 {
+			margin: 0;
+			font-size: 2.1em;
+			font-weight: 700;
+			background: $textColor;
+			color: #FFF;
+			padding: 0.3em 0.5em;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+
+		li {
+			padding: 0.5em 1em;
+			display: block;
+			width: 100%;
+			
+
+			&:nth-child(even) {
+				background: lighten($textColor, 40%);
+			}
+
+
+			span {
+				width: 100%;
+				display: block;
+				margin: 0.5em 0;
+			}
+		}
+	}
+}

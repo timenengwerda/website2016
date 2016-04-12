@@ -13,4 +13,21 @@
 	.timen {
 		width: 50%;
 	}
+
+	.cv article.subject ul li {
+		display: table;
+		span {
+			margin: 0;
+			width: auto;
+			display: table-cell;
+
+			&:nth-of-type(1) {
+				width: 25%;
+			}
+
+			&:nth-of-type(3) {
+				width: 35%;
+			}
+		}
+	}
 }
