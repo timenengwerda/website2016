@@ -97,13 +97,28 @@ app.directive('resizePortfolioTile', ['$timeout', function ($timeout) {
 		'imagex1': 'portfolio/auti-app.jpg',
 		'link': 'https://github.com/timenengwerda/auti_app',
 		'linktype': 'git'
+	},{
+		'title': 'Prikkr',
+		'imagex1': 'portfolio/prikkr.png',
+		'link': 'https://github.com/timenengwerda/prikkr',
+		'linktype': 'git'
 	}];
 
 	//$scope.$broadcast('tilesLoaded');
 }])
 .controller('HomeController', ['$scope', function ($scope) {
 	$scope.age = 0;
-
+/*
 	var birthday = +new Date('9/12/1986"');
-	$scope.age = ~~((Date.now() - birthday) / (31557600000));
+	$scope.age = ~~((Date.now() - birthday) / (31557600000));*/
+
+	var today = new Date();
+    var birthDate = new Date('9/12/1986');
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    
+    $scope.age = age;
 }]);
